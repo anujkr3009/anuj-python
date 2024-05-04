@@ -1,0 +1,22 @@
+#Quesion - write a program to multiply all number in the list
+
+
+number = [20,30,50,40,60,70]
+#initialize a variable to store the product of the list
+product = 1
+#iterate through the list and accumulate the product of the elements
+for i in number:
+    product *= i
+print(f"Product of the elements in the list is {product}")
+
+
+
+
+#with logger
+from loguru import logger
+import math
+number=[20,30,40,50,60]
+product=1
+for i in number:
+    product*=i
+logger.info(f"Product of the element in the list is {product}")
