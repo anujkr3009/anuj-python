@@ -1,0 +1,26 @@
+#problem no 51
+#question - write a program to find largest number in a list
+
+
+number = [20,59,89,-34,24,-41,76]
+#initialize a varible to score the minimum value, intially set to the first value in the list 
+minimum = number[0]
+#iterate through the list and update the minimum value if a smaller value is found 
+for i in number:
+    if i > minimum:
+        minimum = i
+print(f"Largest number in the list is {minimum}")
+
+
+
+
+#with logger
+from loguru import logger
+import math
+
+number = [20,-59,48,23,67,66]
+minimum = number[0]
+for i in number:
+    if i > minimum:
+        minimum = i
+logger.info(f"Largest number in the list is {minimum}")
