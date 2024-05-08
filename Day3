@@ -1,0 +1,24 @@
+#problem 49
+#question - write a program to find sum of element in list
+
+
+number = [20,30,40,50,60,70]
+#initialize a variable to store the sum of the list 
+sum = 0
+#iterate through the list and accumulate the sum of the elements
+for i in number:
+    sum += i
+print(f"Sum of the elements in the list is {sum}")
+
+
+
+
+#with logger
+from loguru import logger
+import math
+
+number = [20,30,40,50,60,70]
+sum = 0
+for i in number:
+    sum += i
+logger.info(f"Sum of the elements in the list is {sum}")
