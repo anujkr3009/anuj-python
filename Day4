@@ -1,0 +1,24 @@
+#problem 52
+#question - write a program to find a smallest number in the list
+
+number = [20,-56,55,23,45,65]
+#initialize a variable to store the minimum value, initially set to the first value in the list
+minimum = number[0]
+#iterate through the list and update the minimum value if a smaller value is found
+for i in number:
+    if i < minimum:
+        minimum = i
+print(f"Smallest number in the list is {minimum}")
+
+
+
+#with logger 
+from loguru import logger
+import math
+
+number = [2,-3,4,3,6,1,0]
+minimum = number[0]
+for i in number:
+    if i < minimum:
+        minimum = i
+logger.info(f"Smallest number in the list is {minimum}")
