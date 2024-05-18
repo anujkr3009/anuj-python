@@ -1,0 +1,34 @@
+#problem 53
+#question - write a program to find second largest number in a list---------------
+
+
+
+number = [48,35,67,87,13,63]
+
+#sort the list in decending order
+number.sort(reverse=True)
+print(f"Decreasing order is {number}")
+
+#check if the list has atleast 2 elements
+if len(number) >= 2:
+    second_largest = number[1]
+    print(f"Second largest number in the list is {second_largest}")
+else:
+    print("List doesn't contain second largest number")
+
+
+
+
+#with logger
+from loguru import logger
+import math
+
+number = [48,35,67,87,13,63]
+number.sort(reverse=True)
+logger.info(f"Decreasing order is {number}")
+
+if len(number) >= 2:
+    second_largest = number[1]
+    logger.info(f"Second largest number in the list is {second_largest}")
+else:
+    logger.info(f"List doesn't contain second largest number")
