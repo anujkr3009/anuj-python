@@ -1,0 +1,38 @@
+#problem 54
+
+
+#question - write a program to find N largest element of the list
+
+
+def find_n_largest_elements(lst,n):
+
+    #sort the list in decending order
+    sorted_list = sorted(lst,reverse=True)
+
+    #get the first N element
+    largest_elements = sorted_list[:n]
+    return largest_elements
+
+numbers = [48,35,67,87,13,63]
+n = int(input("Enter the value of n:"))
+
+#find hte N largest elemens from the list
+result = find_n_largest_elements(numbers,n)
+print(f"{n} largest elements in the list are {result}")
+
+
+
+
+
+#with logger
+from loguru import logger
+import math
+def find_n_largest_elements(lst,n):
+    sorted_list = sorted(lst,reverse=True)
+    largest_elements = sorted_list[:n]
+    return largest_elements
+numbers = [13,56,67,34,45,67]
+n = int(input("Enter the value of n :"))
+logger.info(f"Enter the value of n :{n}")
+result = find_n_largest_elements(numbers,n)                 
+logger.info(f"{n} largest elements in the list are {result}")
